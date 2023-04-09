@@ -82,7 +82,7 @@ public class SaveFileHeader {
             stream.writeInt(Integer.reverseBytes(this.modFlags));
             stream.writeInt(Integer.reverseBytes(saveIdentifier.length()));
             stream.write((saveIdentifier).getBytes());
-            //stream.write(this.body);
+            stream.write(this.body);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
